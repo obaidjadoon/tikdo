@@ -64,11 +64,12 @@ def get_video_info():
         url = data.get('url', '').strip()
         
         if not url:
-            return jsonify({'error': 'Please provide a TikTok URL'}), 400
+            return jsonify({'error': 'Please provide a TikTok or Pinterest URL'}), 400
         
-        # Validate TikTok URL
-        if 'tiktok.com' not in url.lower():
-            return jsonify({'error': 'Please provide a valid TikTok URL'}), 400
+        # Validate URL (TikTok or Pinterest)
+        url_lower = url.lower()
+        if 'tiktok.com' not in url_lower and 'pinterest.com' not in url_lower and 'pin.it' not in url_lower:
+            return jsonify({'error': 'Please provide a valid TikTok or Pinterest URL'}), 400
         
         # Get video info without downloading
         ydl_opts = {
@@ -119,15 +120,19 @@ def download_video():
         quality = data.get('quality', 'best')
         
         if not url:
-            return jsonify({'error': 'Please provide a TikTok URL'}), 400
+            return jsonify({'error': 'Please provide a TikTok or Pinterest URL'}), 400
         
-        # Validate TikTok URL
-        if 'tiktok.com' not in url.lower():
-            return jsonify({'error': 'Please provide a valid TikTok URL'}), 400
+        # Validate URL (TikTok or Pinterest)
+        url_lower = url.lower()
+        if 'tiktok.com' not in url_lower and 'pinterest.com' not in url_lower and 'pin.it' not in url_lower:
+            return jsonify({'error': 'Please provide a valid TikTok or Pinterest URL'}), 400
+        
+        # Detect platform
+        platform = 'pinterest' if ('pinterest.com' in url_lower or 'pin.it' in url_lower) else 'tiktok'
         
         # Generate unique filename
         unique_id = str(uuid.uuid4())[:8]
-        output_path = DOWNLOAD_FOLDER / f'tiktok_{unique_id}.mp4'
+        output_path = DOWNLOAD_FOLDER / f'{platform}_{unique_id}.mp4'
         
         # Set format based on quality selection
         if quality == '1080p':

@@ -19,12 +19,12 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Validate URL
         if (!url) {
-            showError('Please enter a TikTok URL');
+            showError('Please enter a TikTok or Pinterest URL');
             return;
         }
         
-        if (!url.includes('tiktok.com')) {
-            showError('Please enter a valid TikTok URL (must contain tiktok.com)');
+        if (!url.includes('tiktok.com') && !url.includes('pinterest.com') && !url.includes('pin.it')) {
+            showError('Please enter a valid TikTok or Pinterest URL');
             return;
         }
         
