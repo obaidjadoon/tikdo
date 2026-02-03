@@ -19,11 +19,15 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Validate URL
         if (!url) {
-            showError('Please enter a TikTok or Pinterest URL');
+            showError('Please enter a video URL');
             return;
         }
         
-        if (!url.includes('tiktok.com') && !url.includes('pinterest.com') && !url.includes('pin.it')) {
+        const urlLower = url.toLowerCase();
+        const isTikTok = urlLower.includes('tiktok.com');
+        const isPinterest = urlLower.includes('pinterest.com') || urlLower.includes('pin.it');
+        
+        if (!isTikTok && !isPinterest) {
             showError('Please enter a valid TikTok or Pinterest URL');
             return;
         }

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>Free Pinterest Video Downloader - Download Pinterest Videos | TikDo</title>
+    <meta name="title" content="Free Pinterest Video Downloader - Download Pinterest Videos | TikDo">
+    <meta name="description" content="Download Pinterest videos and video pins in HD for free. Save recipes, DIY tutorials, workout videos without watermarks. Fast, secure, and no registration required.">
+    <meta name="keywords" content="pinterest downloader, download pinterest videos, pinterest video downloader, save pinterest videos, pinterest mp4 download, recipe video downloader, diy video downloader">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Free Pinterest Video Downloader - Download Pinterest Videos">
+    <meta property="og:description" content="Download Pinterest videos in HD for free. Save recipes, DIY tutorials, and more.">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header-section">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="/">
+                    <i class="fab fa-tiktok"></i> TikDo
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">TikTok Downloader</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/pinterest">Pinterest Downloader</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/privacy">Privacy</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section" style="background: linear-gradient(135deg, #e60023 0%, #bd081c 100%);">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h1 class="hero-title"><i class="fab fa-pinterest"></i> Pinterest Video Downloader</h1>
+                    <p class="hero-subtitle">Download Pinterest videos and video pins in HD quality. Save recipes, DIY tutorials, workout videos, and more - completely free!</p>
+                </div>
+            </div>
+            
+            <!-- Download Form -->
+            <div class="row justify-content-center mt-4">
+                <div class="col-lg-8">
+                    <div class="download-card">
+                        <form id="downloadForm">
+                            <div class="input-group input-group-lg">
+                                <input type="text" class="form-control" id="videoUrl" placeholder="Paste Pinterest video URL here (pinterest.com or pin.it)..." required>
+                                <button class="btn btn-primary" type="submit" id="downloadBtn" style="background: #e60023;">
+                                    <i class="fas fa-download"></i> Download
+                                </button>
+                            </div>
+                        </form>
+                        <div id="loading" class="loading-spinner" style="display: none;">
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                            <p class="mt-2">Processing your video...</p>
+                        </div>
+                        <div id="result" class="result-section" style="display: none;"></div>
+                        <div id="error" class="alert alert-danger mt-3" style="display: none;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Use Section -->
+    <section id="how-to-use" class="content-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2>How to Download Pinterest Videos</h2>
+                    <p class="section-subtitle">Save Pinterest video pins in 3 easy steps</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <h3>Copy Pinterest URL</h3>
+                        <p>Open Pinterest, find the video pin you want, click the 3 dots (•••) and select "Copy link".</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <h3>Paste URL</h3>
+                        <p>Paste the Pinterest URL into the box above and click Download.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <h3>Save Video</h3>
+                        <p>Choose quality and download your Pinterest video in MP4 format!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2>Why Use Our Pinterest Video Downloader?</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card">
+                        <i class="fab fa-pinterest feature-icon" style="color: #e60023;"></i>
+                        <h3>Pinterest Pins</h3>
+                        <p>Download any Pinterest video pin - recipes, DIY, workouts, tutorials.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card">
+                        <i class="fas fa-utensils feature-icon" style="color: #e60023;"></i>
+                        <h3>Save Recipes</h3>
+                        <p>Download cooking videos to follow recipes offline in your kitchen.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card">
+                        <i class="fas fa-hammer feature-icon" style="color: #e60023;"></i>
+                        <h3>DIY Tutorials</h3>
+                        <p>Save home improvement and craft videos for your projects.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card">
+                        <i class="fas fa-dumbbell feature-icon" style="color: #e60023;"></i>
+                        <h3>Workout Videos</h3>
+                        <p>Download fitness and yoga videos to practice without internet.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pinterest Content Section -->
+    <section class="seo-content-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <article>
+                        <h2>Download Pinterest Videos - Complete Guide 2026</h2>
+                        <p>Pinterest is the ultimate platform for discovering video content about recipes, DIY projects, home decor, fashion, and more. With our Pinterest video downloader, you can save these videos to watch offline anytime.</p>
+                        
+                        <h3>What Can You Download from Pinterest?</h3>
+                        <ul>
+                            <li><strong>Recipe Videos:</strong> Cooking tutorials, baking guides, meal prep ideas</li>
+                            <li><strong>DIY Tutorials:</strong> Home improvement, crafts, woodworking projects</li>
+                            <li><strong>Workout Videos:</strong> Yoga, fitness routines, exercise guides</li>
+                            <li><strong>Makeup Tutorials:</strong> Beauty tips, makeup techniques, skincare routines</li>
+                            <li><strong>Home Decor:</strong> Interior design ideas, organization hacks</li>
+                            <li><strong>Fashion Tips:</strong> Outfit ideas, styling guides</li>
+                        </ul>
+                        
+                        <h3>Why Download Pinterest Videos?</h3>
+                        <p><strong>Offline Access:</strong> Watch recipe videos while cooking without worrying about internet connection or getting your device dirty.</p>
+                        <p><strong>Save for Later:</strong> Build a personal library of DIY tutorials and crafts you want to try.</p>
+                        <p><strong>Better Learning:</strong> Pause, rewind, and watch at your own pace without buffering.</p>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h4><i class="fab fa-tiktok"></i> TikDo</h4>
+                    <p>Download videos from TikTok and Pinterest without watermarks. Free and easy to use.</p>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5>Downloaders</h5>
+                    <ul class="footer-links">
+                        <li><a href="/">TikTok Downloader</a></li>
+                        <li><a href="/pinterest">Pinterest Downloader</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5>Legal</h5>
+                    <ul class="footer-links">
+                        <li><a href="/privacy">Privacy Policy</a></li>
+                        <li><a href="/disclaimer">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <p class="copyright">&copy; 2026 TikDo. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/js/main.js"></script>
+</body>
+</html>

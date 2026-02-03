@@ -41,6 +41,11 @@ def privacy():
     """Privacy policy page"""
     return render_template('privacy.html')
 
+@app.route('/pinterest')
+def pinterest():
+    """Pinterest downloader page"""
+    return render_template('pinterest.html')
+
 @app.route('/disclaimer')
 def disclaimer():
     """Disclaimer page"""
@@ -134,13 +139,13 @@ def download_video():
         unique_id = str(uuid.uuid4())[:8]
         output_path = DOWNLOAD_FOLDER / f'{platform}_{unique_id}.mp4'
         
-        # Set format based on quality selection
+        # Set format based on quality selection (simplified to avoid ffmpeg)
         if quality == '1080p':
-            format_string = 'bestvideo[height<=1080]+bestaudio/best[height<=1080]'
+            format_string = 'best[height<=1080]/best'
         elif quality == '720p':
-            format_string = 'bestvideo[height<=720]+bestaudio/best[height<=720]'
+            format_string = 'best[height<=720]/best'
         elif quality == '480p':
-            format_string = 'bestvideo[height<=480]+bestaudio/best[height<=480]'
+            format_string = 'best[height<=480]/best'
         else:
             format_string = 'best'
         
@@ -152,12 +157,6 @@ def download_video():
             'no_warnings': True,
             'extract_flat': False,
             'nocheckcertificate': True,
-            'merge_output_format': 'mp4',
-            # Try to get version without watermark
-            'postprocessors': [{
-                'key': 'FFmpegVideoConvertor',
-                'preferedformat': 'mp4',
-            }],
         }
         
         # Download the video
